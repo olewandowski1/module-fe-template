@@ -1,4 +1,4 @@
-import { Button, cn } from '@module/fe-core';
+import { cn } from '@module/fe-core';
 
 export const TemplateComponent = () => {
   return (
@@ -10,7 +10,6 @@ export const TemplateComponent = () => {
       >
         Template Component 1
       </h1>
-      <Button />
     </div>
   );
 };

@@ -2,13 +2,16 @@
 import '@node_modules/@module/fe-core/src/styles/globals.css';
 
 import { TemplateComponent } from '@/components/template-component';
+import { Ref } from '@module/fe-core';
 
 // Main entry point for the module, include all configurations here
 const TEMPLATE_MODULE_CONFIG = {
-  contributionExample: ['TemplateComponent'],
+  refs: [
+    {
+      key: 'template-component',
+      value: TemplateComponent,
+    },
+  ] as Ref[],
 };
-
-// Export all components and utils to be used by other modules
-export { TemplateComponent };
 
 export default TEMPLATE_MODULE_CONFIG;
