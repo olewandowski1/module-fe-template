@@ -14,7 +14,7 @@ const TEMPLATE_MODULE_CONFIG = {
   ] as Ref[],
   routes: [
     {
-      path: ROUTE_PATHS.TEMPLATE,
+      path: ROUTE_PATHS.TEMPLATE._SELF,
       component: TemplateComponent,
     },
   ] as Route[],
