@@ -1,4 +1,4 @@
-import { cn } from '@module/fe-core';
+import { cn, formatMessage } from '@module/fe-core';
 
 export const TemplateComponent = () => {
   return (
@@ -8,7 +8,7 @@ export const TemplateComponent = () => {
           'text-lg': true,
         })}
       >
-        Template Component 1
+        {formatMessage('template', 'TemplateComponent.welcome')}
       </h1>
     </div>
   );

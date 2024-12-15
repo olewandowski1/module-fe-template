@@ -1,0 +1,5 @@
+{
+  "template": {
+    "TemplateComponent.welcome": "Welcome from the `fe-template` TemplateComponent component."
+  }
+}
