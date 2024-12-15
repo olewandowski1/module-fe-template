@@ -67,5 +67,35 @@ To get started with the `module-fe-template` module, follow these steps:
 ### How to create a new route?
 
 - First, you need to define a **unique** path inside the `routes.ts` file (`ROUTE_PATHS` constant).
+
   - **Static Routes**: You can define static routes inside the `/services/router.ts` file. **NOTE**: Defining a static route is possible only in `core` module.
   - **Dynamic Routes**: You can export a dynamic route from the `index.tsx` file. It will be fetched from the module and initialized inside the Router.
+
+### How to handle new translation?
+
+- To handle a new translation, you need to add a new entry to the `en.json` file. In the `template` module, this has to be in a namespace called `template`. The pattern for adding it is `COMPONENT_NAME.DETAIL`. Then, you can use the `formatMessage` function to utilize the new translation.
+
+  - Example:
+    ```json
+    // locales/en.json
+    {
+      "template": {
+        "TemplateComponent.welcome": "Welcome from the `fe-template` TemplateComponent component.",
+        "NewComponent.message": "This is a new message for the NewComponent."
+      }
+    }
+    ```
+  - Usage:
+
+    ```typescript
+    import { formatMessage } from '@/lib/translations';
+
+    // components/new-component.tsx
+    const NewComponent = () => {
+      return (
+        <div>
+          <p>{formatMessage('template', 'NewComponent.message')}</p>
+        </div>
+      );
+    };
+    ```
